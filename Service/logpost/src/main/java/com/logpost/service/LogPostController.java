@@ -1,5 +1,6 @@
 package com.logpost.service;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,7 +19,9 @@ import org.slf4j.LoggerFactory;
  * 
  */
 @RestController
-@RequestMapping("/")
+@CrossOrigin(origins = "*")
+@RequestMapping(value="/")
+
 public class LogPostController{
 
 	private final String MESSAGE = "Log Post Service Running";
@@ -29,7 +32,7 @@ public class LogPostController{
 	 * Provides Service Heartbeat
 	 * @return
 	 */
-    @GetMapping("/status")
+    @GetMapping(value = "/status", produces="text/plain")
 	public String home() {
 
 		_logger.info(MESSAGE);
@@ -41,32 +44,35 @@ public class LogPostController{
 	 * info method is used for logging information log messages
 	 * @return
 	 */
-	@PostMapping("/info")
-	public void logInfo(@RequestBody String message) {
+	
+	@PostMapping(value = "/info", produces="text/plain")
+	public String logInfo(@RequestBody String message) {
 
 		_logger.info(message);
-		return;
+		return "";
+
 	}
 
 	/**
 	 * error method is used for logging error or exception log messages
 	 * @return
 	 */
-	@PostMapping("/error")
-	public void logError(@RequestBody String message) {
+	
+	@PostMapping(value = "/err", produces="text/plain")
+	public String logError(@RequestBody String message) {
 
 		_logger.error(message);
-		return;
+		return "";
 	}
 
 	/**
 	 * warn method is used for warning log messages
 	 * @return
 	 */
-	@PostMapping("/warn")
-	public void logWarn(@RequestBody String message) {
+	@PostMapping(value="/warn", produces="text/plain")
+	public String logWarn(@RequestBody String message) {
 
 		_logger.warn(message);
-		return;
+		return "";
 	}
 }
