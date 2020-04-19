@@ -23,7 +23,7 @@ public class LogPostDemoApplication extends Application {
         super.onTerminate();
     }
 
-    public static LogPostDemoApplication getInstance(){
+    public static Application getInstance(){
         return applicationInstance;
     }
 

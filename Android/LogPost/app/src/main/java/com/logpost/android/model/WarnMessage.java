@@ -23,8 +23,7 @@ public class WarnMessage implements LogPostMessage {
     public WarnMessage(String msg){
         this.message = Build.MODEL + " - " + msg;
 
-
-        logURL = String.format("http://10.10.10.6:45600/%s",  LogPostDemoApplication.getInstance().getString(R.string.warn_url));
+        logURL = String.format("%s%s", LOGPOST_SERVICE_IP,  LogPostDemoApplication.getInstance().getString(R.string.warn_url));
     }
 
     @Override

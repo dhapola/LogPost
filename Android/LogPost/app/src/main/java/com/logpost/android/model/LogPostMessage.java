@@ -9,6 +9,9 @@ package com.logpost.android.model;
  *
  */
 public interface LogPostMessage {
+
+    static final String LOGPOST_SERVICE_IP = "http://10.10.10.6:45600/";
+
     public String getMessage();
     public void setMessage(String msg);
     public String getLogURL();

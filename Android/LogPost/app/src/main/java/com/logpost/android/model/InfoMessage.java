@@ -21,7 +21,7 @@ public class InfoMessage implements LogPostMessage {
 
     public InfoMessage(String msg){
         this.message = Build.MODEL + " - " + msg;
-        logURL = String.format("http://10.10.10.6:45600/%s",  LogPostDemoApplication.getInstance().getString(R.string.info_url));
+        logURL = String.format("%s%s", LOGPOST_SERVICE_IP,  LogPostDemoApplication.getInstance().getString(R.string.info_url));
 
     }
 
