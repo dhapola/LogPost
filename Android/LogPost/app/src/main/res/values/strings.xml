@@ -2,5 +2,5 @@
     <string name="app_name">LogPostDemo</string>
     <string name="warn_url">logpost-ws/warn</string>
     <string name="info_url">logpost-ws/info</string>
-    <string name="error_url">logpost-ws/error</string>
+    <string name="error_url">logpost-ws/err</string>
 </resources>

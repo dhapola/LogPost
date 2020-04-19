@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8">
     <title>LogPost Demo for Web clients</title>
@@ -9,11 +10,21 @@
 <body>
 
 
-    <H2>LogPost Demo for Web clients</H2>
-    <input type="button" value="Log Info Message" onclick="logInfo('This is an Info Message...')" />
-    <input type="button" value="Log Warning Message" onclick="logWarn('This is a Warning Message...')" />
-    <input type="button" value="Log Error Message" onclick="logError('This is an Error Message...')" />
+    <H3 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">LogPost Demo for Web clients</H2>
 
+    <div style="border-radius: 25px;
+                    border: 2px solid rgb(33, 70, 173);
+                    padding: 20px;
+                    width: 200px;
+                    height: 100px;
+                    vertical-align: middle; 
+                    text-align: center;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;">
+        <input type="button" value="Log Info Message" onclick="logInfo('This is an Info Message...')" /> <br/><br/>
+        <input type="button" value="Log Warning Message" onclick="logWarn('This is a Warning Message...')" />
+        <br/><br/>
+        <input type="button" value="Log Error Message" onclick="logError('This is an Error Message...')" /> 
+    </div>
 </body>
 
 </html>
