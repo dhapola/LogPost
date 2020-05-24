@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  hyp-logpost:
+    image: deepeshd/logpost:latest
+    ports:
+    - "45610"
+    environment:
+      - server.port=0
+      - spring.application.name=logpost-ws
+      - eureka.client.service-url.defaultZone=http://<<discovery-container-link>>:45601/eureka/
+      - spring.devtools.restart.enabled=true
+      - security.basic.enabled=false
+      - service.message=Hello from LogPost Service
+      - logging.file.name=/Users/api-logs/logpost-ws.log
+    volumes:
+      - /Users/api-logs:/Users/api-logs
+    links:
+      - <<discovery-container-link>>
+      - <<api-gateway-link>>
