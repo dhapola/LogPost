@@ -1,7 +1,7 @@
 # LogPost
 Framework to Post Logs from Android, iOS and web frontends to ELK Stack
 
-Pl go through wiki pages
+Details on below wiki pages:
 
 [LogPost Overview](https://github.com/dhapola/LogPost/wiki/LogPost-Overview)
 

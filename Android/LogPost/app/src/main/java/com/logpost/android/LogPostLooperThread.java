@@ -12,7 +12,7 @@ import java.nio.charset.StandardCharsets;
 
 /**
  * LogPostLooperThread class provides a mechanism to queue log messages and send these log messages
- * to LogPost service.
+ * to LogPost service asynchronously.
  *
  * @author  Deepesh Dhapola
  * @version 1.0
