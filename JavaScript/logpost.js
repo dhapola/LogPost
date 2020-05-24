@@ -1,6 +1,6 @@
 /**
  * This JavaScript file encapsulates capabilities for posting log entries to
- * logpost service. Successfully posted log entries are picked up by ELK stack
+ * logpost service asynchronously. Successfully posted log entries are picked up by ELK stack
  *
  * @author  Deepesh Dhapola
  * @version 1.0
